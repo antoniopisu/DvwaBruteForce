@@ -22,7 +22,7 @@ RESET = "\033[0m"       # Resetta il colore
 RED = "\033[91m"        # Rosso per tentativi falliti
 GREEN = "\033[92m"      # Verde per tentativi di successo
 
-# Step 1: Effettua il login
+# Effettua il login
 login_data = {
     "username": "admin",
     "password": "password",
@@ -49,7 +49,7 @@ for username in username_list:
             csrf_token = csrf_token_match.group(1)
             print(f"Token CSRF trovato: {csrf_token}")
 
-            #Inviamo la richiesta GET con il token, username e password
+            # Inviamo la richiesta GET con il token, username e password
             params = {
                 "username": username,
                 "password": password,
